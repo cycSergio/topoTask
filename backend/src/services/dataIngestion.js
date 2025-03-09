@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import Papa from 'papaparse';
-import pdfParse from 'pdf-parse';
+//import pdfParse from 'pdf-parse';
+import pdfParse from 'pdf-parse/lib/pdf-parse';
+
 import officeParser from 'officeparser';
 import { promisify } from 'util';
 
@@ -22,10 +24,20 @@ export default class DataIngestion {
     }
 
     static async readPDF(fileName = 'dataset3.pdf') {
-        const filePath = path.join(dataDir, fileName);
-        const fileBuffer = fs.readFileSync(filePath);
-        const data = await pdfParse(fileBuffer);
-        return data.text;
+        try {
+            const filePath = path.join(process.cwd(), 'data', fileName);
+
+            if (!fs.existsSync(filePath)) {
+                throw new Error(`File not found: ${filePath}`);
+            }
+
+            const fileBuffer = fs.readFileSync(filePath);
+            const data = await pdfParse(fileBuffer);
+            return data.text;
+        } catch (error) {
+            console.error("Error reading PDF:", error.message);
+            return "Error: Unable to read PDF file.";
+        }
     }
 
     static async readPPTX(fileName = 'dataset4.pptx') {
