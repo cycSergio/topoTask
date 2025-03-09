@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Papa from 'papaparse';
 //import pdfParse from 'pdf-parse';
-import pdfParse from 'pdf-parse/lib/pdf-parse';
+import pdfParse from 'pdf-parse/lib/pdf-parse.js';
 
 import officeParser from 'officeparser';
 import { promisify } from 'util';
