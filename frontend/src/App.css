@@ -1,0 +1,169 @@
+#root {
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 auto;
+}
+
+/* .App {
+    position: relative;
+} */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  min-width: 1190px;
+  height: 40px;
+  border-bottom: 1px #ddd solid;
+  background-color: #e3e4e5;
+}
+
+.menu {
+  background-color: #e3e4e5;
+  height: 40px;
+  margin: 0 auto;
+  width: 1190px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.menuItems {
+  background-color: #bfa;
+}
+
+.menuItems li,
+.menuItems .line {
+  float: right;
+}
+
+.menuItems li {
+  padding: 0 7px;
+}
+
+button {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menuItems .line {
+  height: 14px;
+  border-left: 2px #ccc solid;
+  margin: 13px 5px;
+}
